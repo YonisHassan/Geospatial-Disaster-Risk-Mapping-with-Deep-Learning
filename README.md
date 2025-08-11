@@ -30,7 +30,7 @@ The base dataset contains comprehensive disaster records with attributes includi
 - Socio-economic indicators including GDP per capita, population density, and Human Development Index scores
 - Geographic encoding with country-level administrative boundaries and regional classifications
 
-[Space for dataset visualization or sample data table]
+![](https://github.com/YonisHassan/Geospatial-Disaster-Risk-Mapping-with-Deep-Learning/edit/main/avalanche-disaster.gif)
 
 ---
 
