@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <radialGradient id="hotspot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#f97316" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0"/>
+    </radialGradient>
+    <radialGradient id="hotspot2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#84cc16" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a3e635" stop-opacity="0.0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="700" fill="url(#ocean)"/>
+
+  <text x="50%" y="50" text-anchor="middle" font-family="Inter, system-ui" font-size="26" font-weight="700" fill="#0f172a">
+    Global Disaster Risk Surface (illustrative)
+  </text>
+  <text x="50%" y="78" text-anchor="middle" font-family="Inter, system-ui" font-size="14" fill="#475569">
+    Hotspots indicate higher modeled probability across a geographic grid
+  </text>
+
+  <!-- Lat/Lon grid -->
+  <g stroke="#94a3b8" stroke-width="1" opacity="0.6">
+    <!-- vertical lines every 10deg -->
+    <g>
+      <line x1="80" y1="120" x2="80" y2="580"/>
+      <line x1="180" y1="120" x2="180" y2="580"/>
+      <line x1="280" y1="120" x2="280" y2="580"/>
+      <line x1="380" y1="120" x2="380" y2="580"/>
+      <line x1="480" y1="120" x2="480" y2="580"/>
+      <line x1="580" y1="120" x2="580" y2="580"/>
+      <line x1="680" y1="120" x2="680" y2="580"/>
+      <line x1="780" y1="120" x2="780" y2="580"/>
+      <line x1="880" y1="120" x2="880" y2="580"/>
+      <line x1="980" y1="120" x2="980" y2="580"/>
+      <line x1="1080" y1="120" x2="1080" y2="580"/>
+    </g>
+    <!-- horizontal lines every 10deg -->
+    <g>
+      <line x1="80" y1="140" x2="1080" y2="140"/>
+      <line x1="80" y1="200" x2="1080" y2="200"/>
+      <line x1="80" y1="260" x2="1080" y2="260"/>
+      <line x1="80" y1="320" x2="1080" y2="320"/>
+      <line x1="80" y1="380" x2="1080" y2="380"/>
+      <line x1="80" y1="440" x2="1080" y2="440"/>
+      <line x1="80" y1="500" x2="1080" y2="500"/>
+      <line x1="80" y1="560" x2="1080" y2="560"/>
+    </g>
+  </g>
+
+  <!-- Hotspots (illustrative positions) -->
+  <g>
+    <circle cx="320" cy="340" r="120" fill="url(#hotspot)"/>
+    <circle cx="760" cy="300" r="100" fill="url(#hotspot)"/>
+    <circle cx="980" cy="420" r="90" fill="url(#hotspot2)"/>
+    <circle cx="540" cy="460" r="110" fill="url(#hotspot2)"/>
+  </g>
+
+  <!-- Frame -->
+  <rect x="60" y="110" width="1040" height="480" rx="10" fill="none" stroke="#1f2937" stroke-width="2" opacity="0.5"/>
+
+  <!-- Legend -->
+  <g transform="translate(60,620)" font-family="Inter, system-ui">
+    <text x="0" y="0" font-size="14" fill="#334155" font-weight="700">Normalized Risk Score</text>
+    <defs>
+      <linearGradient id="legendGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#22c55e"/>
+        <stop offset="50%" stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#ef4444"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="12" width="260" height="14" fill="url(#legendGrad)" rx="7"/>
+    <text x="0" y="42" font-size="12" fill="#475569">Low</text>
+    <text x="120" y="42" font-size="12" fill="#475569" text-anchor="middle">Medium</text>
+    <text x="260" y="42" font-size="12" fill="#475569" text-anchor="end">High</text>
+  </g>
+
+  <text x="50" y="680" font-family="Inter, system-ui" font-size="12" fill="#94a3b8">Illustrative heat surface — not real predictions</text>
+</svg>

@@ -30,7 +30,7 @@ The base dataset contains comprehensive disaster records with attributes includi
 - Socio-economic indicators including GDP per capita, population density, and Human Development Index scores
 - Geographic encoding with country-level administrative boundaries and regional classifications
 
-![](https://github.com/YonisHassan/Geospatial-Disaster-Risk-Mapping-with-Deep-Learning/edit/main/avalanche-disaster.gif)
+![Disaster Animation](./avalanche-disaster.gif)
 
 ---
 
@@ -54,7 +54,7 @@ Models are trained using categorical cross-entropy loss with Adam optimization. 
 
 Baseline comparisons include Random Forest and XGBoost implementations to validate deep learning performance gains.
 
-[Space for architecture diagram]
+![Model Architecture](assets/architecture-diagram.svg)
 
 ---
 
@@ -68,7 +68,7 @@ Key mapping features include:
 - Regional aggregation and comparison tools
 - Export functionality for risk assessment reports
 
-[Space for risk map visualization]
+![Risk Map](assets/risk-map.svg)
 
 ---
 
@@ -81,7 +81,7 @@ Initial model evaluation demonstrates superior performance compared to tradition
 - Improved precision in identifying extreme risk areas
 - Robust performance across different disaster types and geographic regions
 
-[Space for results visualization/gif showing model predictions]
+![Results Overview](assets/results-overview.svg)
 
 ---
 
