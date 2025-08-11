@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <text x="50%" y="60" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="28" font-weight="700" fill="#0f172a">
+    Geospatial Disaster Risk Mapping — System Architecture
+  </text>
+  <text x="50%" y="92" text-anchor="middle" font-family="Inter, system-ui" font-size="14" fill="#475569">
+    Data ingestion, preprocessing, deep learning training, evaluation, and risk visualization pipeline
+  </text>
+
+  <!-- Panels -->
+  <g font-family="Inter, system-ui" fill="#0f172a" font-size="14">
+    <!-- Data Sources -->
+    <g transform="translate(50,120)" filter="url(#shadow)">
+      <rect width="300" height="130" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Data Sources</text>
+      <text x="20" y="60" fill="#475569">• NOAA / World Bank Climate</text>
+      <text x="20" y="82" fill="#475569">• Socio-economic indicators</text>
+      <text x="20" y="104" fill="#475569">• Historical disasters (Kaggle)</text>
+    </g>
+
+    <!-- Preprocessing -->
+    <g transform="translate(450,120)" filter="url(#shadow)">
+      <rect width="300" height="170" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Preprocessing</text>
+      <text x="20" y="60" fill="#475569">• Missing value imputation</text>
+      <text x="20" y="82" fill="#475569">• Scaling & encoding</text>
+      <text x="20" y="104" fill="#475569">• Geo normalization</text>
+      <text x="20" y="126" fill="#475569">• Temporal alignment & merge</text>
+    </g>
+
+    <!-- Deep Learning Training -->
+    <g transform="translate(850,120)" filter="url(#shadow)">
+      <rect width="300" height="170" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Deep Learning Training</text>
+      <text x="20" y="60" fill="#475569">• Feedforward network</text>
+      <text x="20" y="82" fill="#475569">• Inputs: geo + env + socio-eco</text>
+      <text x="20" y="104" fill="#475569">• Frameworks: PyTorch, Keras</text>
+      <text x="20" y="126" fill="#475569">• Loss: Categorical CE (Adam)</text>
+    </g>
+
+    <!-- Baselines -->
+    <g transform="translate(850,320)" filter="url(#shadow)">
+      <rect width="300" height="120" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Baselines</text>
+      <text x="20" y="60" fill="#475569">• Random Forest</text>
+      <text x="20" y="82" fill="#475569">• XGBoost</text>
+    </g>
+
+    <!-- Evaluation -->
+    <g transform="translate(450,350)" filter="url(#shadow)">
+      <rect width="300" height="140" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Evaluation</text>
+      <text x="20" y="60" fill="#475569">• Accuracy, Macro F1</text>
+      <text x="20" y="82" fill="#475569">• ROC-AUC per class</text>
+      <text x="20" y="104" fill="#475569">• K-fold cross validation</text>
+    </g>
+
+    <!-- Risk Mapping -->
+    <g transform="translate(450,520)" filter="url(#shadow)">
+      <rect width="300" height="120" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Risk Mapping</text>
+      <text x="20" y="60" fill="#475569">• Grid predictions per type</text>
+      <text x="20" y="82" fill="#475569">• Normalized risk scores</text>
+    </g>
+
+    <!-- Visualization -->
+    <g transform="translate(850,520)" filter="url(#shadow)">
+      <rect width="300" height="120" rx="14" fill="url(#panelGrad)" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-weight="700">Visualization</text>
+      <text x="20" y="60" fill="#475569">• Plotly & Folium maps</text>
+      <text x="20" y="82" fill="#475569">• Filtering & export</text>
+    </g>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <line x1="350" y1="185" x2="450" y2="185"/>
+    <line x1="750" y1="205" x2="850" y2="205"/>
+    <line x1="750" y1="205" x2="850" y2="360"/>
+    <line x1="850" y1="385" x2="750" y2="420" marker-end="url(#arrow)"/>
+    <line x1="1150" y1="205" x2="1150" y2="350"/>
+    <line x1="1000" y1="350" x2="900" y2="420"/>
+    <line x1="750" y1="420" x2="750" y2="520"/>
+    <line x1="750" y1="580" x2="850" y2="580"/>
+  </g>
+
+  <text x="50" y="760" font-family="Inter, system-ui" font-size="12" fill="#94a3b8">Illustrative diagram — not drawn to scale</text>
+</svg>
