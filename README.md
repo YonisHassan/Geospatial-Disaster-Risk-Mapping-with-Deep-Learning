@@ -3,7 +3,7 @@
 **A machine learning approach to predict natural disaster probabilities using environmental and socio-economic indicators across global geographic regions.**
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/YonisHassan/Geospatial-Disaster-Risk-Mapping-with-Deep-Learning/main/flood.jpg" alt="flood image" />
+  <img src="https://raw.githubusercontent.com/YonisHassan/Geospatial-Disaster-Risk-Mapping-with-Deep-Learning/main/assets/flood.jpg" alt="flood image" />
 </div>
 
 ---
